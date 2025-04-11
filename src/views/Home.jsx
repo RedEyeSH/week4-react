@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import SingleView from './SingleView.jsx';
-import MediaRow from './MediaRow.jsx';
+import SingleView from '../components/SingleView.jsx';
+import MediaRow from '../components/MediaRow.jsx';
 
 const mediaArray = [
   {

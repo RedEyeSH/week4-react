@@ -1,7 +1,8 @@
+import { Link } from "react-router";
+
 const MediaRow = (props) => {
   const {item, setSelectedItem} = props;
 
-  // console.log(item);
   function handeClick() {
     setSelectedItem(item);
   }
@@ -17,7 +18,8 @@ const MediaRow = (props) => {
       <td>{item.filesize}</td>
       <td>{item.media_type}</td>
       <td>
-        <button onClick={handeClick}>View</button>
+        {/* <button onClick={handeClick}>View</button> */}
+        <Link to="/single" state={{item}}>Show</Link>
       </td>
     </tr>
   );
