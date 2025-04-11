@@ -7,7 +7,7 @@ import Upload from './views/Upload.jsx';
 
 const App = () => {
   return (
-    <Router basename="/~quangth/week4-react/">
+    <Router basename="/~quangth/week4-react-hooks/">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
