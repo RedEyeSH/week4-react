@@ -14,6 +14,7 @@ const MediaRow = (props) => {
       </td>
       <td>{item.title}</td>
       <td>{item.description}</td>
+      <td>{item.user_id}</td>
       <td>{new Date(item.created_at).toLocaleDateString('fi-FI')}</td>
       <td>{item.filesize}</td>
       <td>{item.media_type}</td>
