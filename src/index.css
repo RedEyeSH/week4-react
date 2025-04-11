@@ -1,3 +1,71 @@
+:root {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #050816;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: white;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 table, tr, th, td {
-  border: 1px solid black;
+  border: 1px solid white;
+}
+
+table {
+  width: 100%;
+  border-radius: 5px;
+}
+
+td {
+  text-align: center;
+  padding: 24px;
+}
+
+td img {
+  width: 260px;
+  height: 200px;
+  object-fit: cover;
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.87);
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+dialog button {
+  display: block;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #101345;
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
 }
