@@ -19,6 +19,34 @@ body {
   padding: 2rem;
 }
 
+nav ul {
+  list-style-type: none;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  background-color: #111738;
+}
+
+main {
+  padding: 2rem 0;
+}
+
 table, tr, th, td {
   border: 1px solid white;
 }
@@ -68,4 +96,9 @@ button {
   cursor: pointer;
   border: 1px solid white;
   color: white;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: #1a1e60;
 }
