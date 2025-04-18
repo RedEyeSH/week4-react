@@ -101,3 +101,27 @@ button {
 button:hover {
   background-color: #1a1e60;
 }
+
+form {
+  padding: 10px;
+  background-color: #111738;
+  width: fit-content;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #263277;
+}
+
+form button {
+  width: 100%;
+  margin: 10px 0;
+} 
