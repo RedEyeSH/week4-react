@@ -10,4 +10,4 @@ const fetchData = async ( url, options = {}) => {
     return json;
   };
   
-export {fetchData};
+export { fetchData };

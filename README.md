@@ -11,3 +11,7 @@ Open [this link](https://users.metropolia.fi/~quangth/week4-react-hooks/) to vie
 ### 01 - React custom hooks
 
 Open [this link](https://users.metropolia.fi/~quangth/week5-react-custom-hooks/) to view the deployed app in your browser.
+
+### 02 - React forms
+
+Open [this link](https://users.metropolia.fi/~quangth/week5-react-forms/) to view the deployed app in your browser.
