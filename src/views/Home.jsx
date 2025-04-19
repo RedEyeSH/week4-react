@@ -5,7 +5,7 @@ import { fetchData } from '../utils/fetchData.js';
 import { useMedia } from '../hooks/apiHooks.js';
 
 const Home = () => {
-  const mediaArray = useMedia();
+  const { mediaArray } = useMedia();
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
