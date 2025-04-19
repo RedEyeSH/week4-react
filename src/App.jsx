@@ -6,20 +6,32 @@ import Single from './views/Single.jsx';
 import Upload from './views/Upload.jsx';
 import Login from './views/Login.jsx';
 import Logout from './views/Logout.jsx';
+import { UserProvider } from './contexts/UserContext.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
 
 const App = () => {
   return (
     <Router basename="/~quangth/week5-react-forms/">
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/single" element={<Single />} />
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/login" element={<Login />}/>
-          <Route path="/logout" element={<Logout />}/>
-        </Route>
-      </Routes>
+      <UserProvider>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/single" element={<Single />} />
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/login" element={<Login />}/>
+            <Route path="/logout" element={<Logout />}/>
+          </Route>
+        </Routes>
+      </UserProvider>
     </Router>
   );
 };
