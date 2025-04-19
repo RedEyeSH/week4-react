@@ -15,3 +15,7 @@ Open [this link](https://users.metropolia.fi/~quangth/week5-react-custom-hooks/)
 ### 02 - React forms
 
 Open [this link](https://users.metropolia.fi/~quangth/week5-react-forms/) to view the deployed app in your browser.
+
+### 03 - React context
+
+Open [this link](https://users.metropolia.fi/~quangth/week5-react-context/) to view the deployed app in your browser.
