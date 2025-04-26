@@ -15,9 +15,8 @@ const useMedia = () => {
                   return result;
                } catch (error) {
                   console.log("Error fetching data:", error);
-                  }
-               })
-            );
+               }
+            }));
          
             const newData = json.map((item) => {
             const result = userData.find(({user_id}) => user_id === item.user_id);
@@ -53,10 +52,38 @@ const useMedia = () => {
       
    };
 
-   return { mediaArray, postMedia };
+   const modifyMedia = async (inputs, token) => {
+      const fetchOptions = {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer: ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(inputs),
+      };
+  
+      return await fetchData(`${import.meta.env.VITE_MEDIA_API}/media/${inputs.id}`, fetchOptions);
+   };
+
+   const deleteMedia = async (id, token) => {
+      const fetchOptions = {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer: ${token}`,
+          'Content-Type': 'application/json',
+        },
+      };
+  
+      return await fetchData(`${import.meta.env.VITE_MEDIA_API}/media/${id}`, fetchOptions);
+   };
+
+   return { mediaArray, postMedia, modifyMedia, deleteMedia };
 };
 
+const tokenExistsInLocalstorage = () => Boolean(localStorage.getItem('token'));
+
 const useAuthentication = () => {
+   const [isLoggedIn, setIsLoggedIn] = useState(tokenExistsInLocalstorage);
    const postLogin = async (inputs) => {
      const fetchOptions = {
        method: 'POST',
@@ -74,10 +101,12 @@ const useAuthentication = () => {
  
      window.localStorage.setItem('token', loginResult.token);
  
+     setIsLoggedIn(tokenExistsInLocalstorage());
+
      return loginResult;
    };
  
-   return { postLogin };
+   return { postLogin, isLoggedIn };
  };
  
  const useUser = () => {

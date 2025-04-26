@@ -1,127 +1,24 @@
-:root {
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  background-color: #050816;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "tailwindcss";
 
-body {
-  color: white;
-}
+@layer base {
+    :root {
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+        background-color: #050816;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: white;
+    }
 
-#root {
-  margin: 0 auto;
-  padding: 2rem;
-}
+    #root {
+        margin: 0 auto;
+        padding: 2rem;
+    }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0;
-  width: fit-content;
+    main {
+        padding: 2rem 0;
+    }
 }
-
-nav a {
-  display: block;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  padding: 1rem;
-  transition: 0.25s;
-}
-
-nav a:hover {
-  background-color: #111738;
-}
-
-main {
-  padding: 2rem 0;
-}
-
-table, tr, th, td {
-  border: 1px solid white;
-}
-
-table {
-  width: 100%;
-  border-radius: 5px;
-}
-
-td {
-  text-align: center;
-  padding: 12px;
-}
-
-td img {
-  width: 2600px;
-  height: 200px;
-  object-fit: cover;
-}
-
-dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: 0;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.8);
-  color: rgba(255, 255, 255, 0.87);
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-  overflow: auto;
-}
-
-dialog button {
-  display: block;
-}
-
-img, video {
-  max-width: 100%;
-}
-
-button {
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #101345;
-  cursor: pointer;
-  border: 1px solid white;
-  color: white;
-  transition: 0.25s;
-}
-
-button:hover {
-  background-color: #1a1e60;
-}
-
-form {
-  padding: 10px;
-  background-color: #111738;
-  width: fit-content;
-}
-
-form div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-form input {
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #263277;
-}
-
-form button {
-  width: 100%;
-  margin: 10px 0;
-} 
