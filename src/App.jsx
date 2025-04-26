@@ -11,7 +11,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx';
 
 const App = () => {
   return (
-    <Router basename="/~quangth/week5-react-upload/">
+    <Router basename="/~quangth/week6-react-tailwind/">
       <UserProvider>
         <Routes>
           <Route element={<Layout />}>

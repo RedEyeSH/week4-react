@@ -10,18 +10,18 @@ const Home = () => {
 
   return (
     <>
-      <h2>My Media</h2>
-      <table>
+      <h2 className="my-4 font-bold text-2xl">My Media</h2>
+      <table className="w-full border border-white rounded-sm">
         <thead>
-          <tr>
-            <th>Thumbnail</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Owner</th>
-            <th>Created</th>
-            <th>Size</th>
-            <th>Type</th>
-            <th>Operations</th>
+          <tr className="border border-white">
+            <th className="border border-white p-3 text-center">Thumbnail</th>
+            <th className="border border-white p-3 text-center">Title</th>
+            <th className="border border-white p-3 text-center">Description</th>
+            <th className="border border-white p-3 text-center">Owner</th>
+            <th className="border border-white p-3 text-center">Created</th>
+            <th className="border border-white p-3 text-center">Size</th>
+            <th className="border border-white p-3 text-center">Type</th>
+            <th className="border border-white p-3 text-center">Operations</th>
           </tr>
         </thead>
         <tbody>

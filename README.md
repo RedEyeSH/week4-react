@@ -23,3 +23,8 @@ Open [this link](https://users.metropolia.fi/~quangth/week5-react-context/) to v
 ### 04 - React upload
 
 Open [this link](https://users.metropolia.fi/~quangth/week5-react-upload/) to view the deployed app in your browser.
+
+## Week 6
+### 01 - React tailwind
+
+Open [this link](https://users.metropolia.fi/~quangth/week6-react-tailwind/) to view the deployed app in your browser.

@@ -21,12 +21,12 @@ const Profile = () => {
   console.log('user', user);
   return (
     <>
-      <h2>Profile</h2>
+      <h2 className="my-4 text-2xl font-bold">Profile</h2>
       {user && (
         <>
-          <p>Username: {user.username}</p>
-          <p>Email: {user.email}</p>
-          <p>
+          <p className="my-2">Username: {user.username}</p>
+          <p className="my-2">Email: {user.email}</p>
+          <p className="my-2">
             Register Date: {new Date(user.created_at).toLocaleString('fi-FI')}
           </p>
         </>

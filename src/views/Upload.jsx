@@ -41,48 +41,53 @@ const Upload = () => {
 
     return (
         <>
-            <h1>Upload</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="title">Title</label>
+            <h1 className="my-4 text-3xl font-bold">Upload</h1>
+            <form className="p-2.5 bg-[#111738] rounded-md w-fit" onSubmit={handleSubmit}>
+                <div className="p-1">
+                    <label className="font-bold" htmlFor="title">Title</label>
                     <input
+                        className="p-1.5 mb-2.5 rounded-sm border border-[#263277] w-full"
                         name="title"
                         type="text"
                         id="title"
                         onChange={handleInputChange}
                     />
                 </div>
-                <div>
+                <div className="p-1">
                     <label htmlFor="description">Description</label>
                     <textarea
+                        className="p-1.5 rounded-sm border border-[#263277] w-full"
                         name="description"
                         rows={5}
                         id="description"
                         onChange={handleInputChange}
                     ></textarea>
                 </div>
-                <div>
+                <div className="p-1">
                     <label htmlFor="file">File</label>
                     <input
+                        className="p-1.5 mb-2.5 rounded-sm border border-[#263277] w-full"
                         name="file"
                         type="file"
                         id="file"
                         accept="image/*, video/*"
-                    onChange={handleFileChange}
+                        onChange={handleFileChange}
                     />
                 </div>
                 <img
+                    className="my-4 mx-auto"
                     src={
                         file
                         ? URL.createObjectURL(file)
-                        : 'https://via.placeholder.com/200?text=Choose+image'
+                        : 'https://placehold.co/600x400?text=Choose+image'
                     }
                     alt="preview"
                     width="200"
                 />
                 <button
+                    className="w-full px-2.5 py-1.5 rounded-sm bg-[#101345] cursor-pointer border border-white text-white transition duration-250 hover:bg-[#1a1e60] font-bold"
                     type="submit"
-                    disabled={file && inputs.title.length > 3 ? false : true}
+                    disabled={!(file && inputs?.title.length > 3)}
                 >
                     Upload
                 </button>
